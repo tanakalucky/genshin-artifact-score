@@ -36,6 +36,18 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <button
+        type="button"
+        onClick={() => {
+          fetch("/api/characters/845301864")
+            .then((res) => res.json() as Promise<{ data: unknown }>)
+            .then((data) => console.log("this is api data ", data));
+        }}
+        aria-label="increment"
+      >
+        api test button
+      </button>
+
       <div className="card">
         <button
           type="button"
