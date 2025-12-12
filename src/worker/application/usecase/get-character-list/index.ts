@@ -11,13 +11,13 @@ export class GetCharacterList {
     this.iconMappingRepository = new IconMappingRepository();
   }
 
-  async execute(userId: string): Promise<{ charcterId: number; iconUrl: string }[]> {
+  async execute(userId: string): Promise<{ characterId: number; iconUrl: string }[]> {
     const characterIds = await this.charactersRepository.getCharacterIdsByUserId(userId);
 
     const characterIcons = await this.iconMappingRepository.getIconMapping();
 
     return characterIds.map((id) => ({
-      charcterId: id,
+      characterId: id,
       iconUrl: characterIcons[id].iconUrl,
     }));
   }
