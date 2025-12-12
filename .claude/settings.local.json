@@ -17,5 +17,8 @@
     "deny": []
   },
   "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": ["cloudflare-document"]
+  "enabledMcpjsonServers": [
+    "serena",
+    "context7"
+  ]
 }
