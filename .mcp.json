@@ -5,7 +5,7 @@
       "args": ["mcp-server-serena"]
     },
     "context7": {
-      "command": "npx",
+      "command": "bunx",
       "args": ["-y", "@upflare/mcp-context7"]
     }
   }
